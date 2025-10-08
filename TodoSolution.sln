@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Core", "Todo.Core\Todo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Core.Tests", "Todo.Core.Tests\Todo.Core.Tests.csproj", "{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{14138BE8-426F-4E9B-9121-14720043C5C9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C2EA0C0C-CC59-4751-8E0C-F0BAF98A630D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F645A66E-9BAD-4751-A8E4-54A1BD449283}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F285175D-D39B-4316-8339-23A5958352B4}"
 	ProjectSection(SolutionItems) = preProject
 		ci.yml = ci.yml
 		publish-package.yml = publish-package.yml
@@ -34,7 +34,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F645A66E-9BAD-4751-A8E4-54A1BD449283} = {14138BE8-426F-4E9B-9121-14720043C5C9}
+		{F285175D-D39B-4316-8339-23A5958352B4} = {C2EA0C0C-CC59-4751-8E0C-F0BAF98A630D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0773C823-59A6-4660-9A70-77D5081189AC}
