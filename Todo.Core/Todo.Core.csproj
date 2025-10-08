@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageId>Todo.Core</PackageId>
+		<Version>0.1.0</Version>
+		<Authors>Reshala</Authors>
+		<Company>Buro.Reshal</Company>
+		<Description>Aga Aga Simple blya</Description>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+</Project>
