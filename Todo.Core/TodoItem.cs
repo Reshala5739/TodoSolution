@@ -1,10 +1,20 @@
-﻿namespace Todo.Core
+﻿using System;
+using System.Text.Json.Serialization;
+
+namespace Todo.Core
 {
     public class TodoItem
     {
-        public Guid Id { get; } = Guid.NewGuid();
+        [JsonInclude]
+        public Guid Id { get; private set; } = Guid.NewGuid();
+
+        [JsonInclude]
         public string Title { get; private set; }
+
+        [JsonInclude]
         public bool IsDone { get; private set; }
+
+        public TodoItem() { }
 
         public TodoItem(string title)
         {

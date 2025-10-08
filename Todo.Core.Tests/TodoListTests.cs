@@ -1,6 +1,7 @@
 using Xunit;
 using Todo.Core;
 using System.Linq;
+using System.IO;
 
 namespace Todo.Core.Tests
 {
@@ -33,6 +34,36 @@ namespace Todo.Core.Tests
             var found = list.Find("buy").ToList();
             Assert.Single(found);
             Assert.Equal("Buy milk", found[0].Title);
+        }
+
+        // ===== JSON тестики =====
+        [Fact]
+        public void SaveAndLoad_RestoresItems()
+        {
+            var list = new TodoList();
+            list.Add("Task 1");
+            list.Add("Task 2");
+
+            string path = Path.Combine(Path.GetTempPath(), "todolist.json");
+
+            list.Save(path);
+            Assert.True(File.Exists(path));
+            var loadedList = new TodoList();
+            loadedList.Load(path);
+
+            Assert.Equal(2, loadedList.Count);
+            Assert.Contains(loadedList.Items, i => i.Title == "Task 1");
+            Assert.Contains(loadedList.Items, i => i.Title == "Task 2");
+            File.Delete(path);
+        }
+
+        [Fact]
+        public void Load_NonExistingFile_Throws()
+        {
+            var list = new TodoList();
+            string path = Path.Combine(Path.GetTempPath(), "nonexistent.json");
+
+            Assert.Throws<FileNotFoundException>(() => list.Load(path));
         }
     }
 }

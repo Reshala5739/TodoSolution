@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 namespace Todo.Core
 {
@@ -22,5 +25,25 @@ namespace Todo.Core
                 StringComparison.OrdinalIgnoreCase));
 
         public int Count => _items.Count;
+
+        public void Save(string path)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(_items, options);
+            File.WriteAllText(path, json);
+        }
+
+        public void Load(string path)
+        {
+            if (!File.Exists(path))
+                throw new FileNotFoundException($"Путь не найден: {path}");
+
+            string json = File.ReadAllText(path);
+            var items = JsonSerializer.Deserialize<List<TodoItem>>(json);
+
+            _items.Clear();
+            if (items != null)
+                _items.AddRange(items);
+        }
     }
 }

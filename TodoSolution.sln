@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Core", "Todo.Core\Todo.Core.csproj", "{5D81F17D-A83A-4491-87E2-066EECCEA69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Core", "Todo.Core\Todo.Core.csproj", "{5D81F17D-A83A-4491-87E2-066EECCEA69B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Core.Tests", "Todo.Core.Tests\Todo.Core.Tests.csproj", "{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Core.Tests", "Todo.Core.Tests\Todo.Core.Tests.csproj", "{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C2EA0C0C-CC59-4751-8E0C-F0BAF98A630D}"
 EndProject
@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		ci.yml = ci.yml
 		publish-package.yml = publish-package.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.csproj", "{5ADC819B-71F1-40A1-8524-181E64BA164B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACCBDDFF-39E3-42FC-9E6B-62FA0D34F735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ADC819B-71F1-40A1-8524-181E64BA164B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADC819B-71F1-40A1-8524-181E64BA164B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADC819B-71F1-40A1-8524-181E64BA164B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADC819B-71F1-40A1-8524-181E64BA164B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
